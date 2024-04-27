@@ -1,0 +1,32 @@
+services:
+  minecraft-server:
+    image: itzg/minecraft-server
+    container_name: minecraft-server
+    restart: unless-stopped
+    tty: true
+    stdin_open: true
+
+    volumes:
+      - ./data:/data # directory to persist your world state :)
+
+    ports:
+      # ports required for gameplay
+      - "25565:25565" # tcp port used by java clients
+      - "19132:19132/udp" # udp port used by bedrock clients
+
+      # optional ports for fidgeting, enable or disabled at will
+      # - "25565:25565/udp" # udp port used to retrieve server status that could be used for health checks
+      # - "25575:25575" # remote control service to trigger remote commands from a rcon client such as https://github.com/Tiiffi/mcrcon
+    
+    environment:
+      # required setup
+      EULA: "TRUE"
+      VERSION: "1.20.4" # server version supported by the bedrock bridge mod "geyser"
+
+      # mods sourced from https://modrinth.com/mods with the mod loader fabric https://fabricmc.net/
+      # - lithium,sodium: popular performance improvements recommended by the community
+      # - fabric-api: dependency from geyser
+      # - geyser: server bridge to handle cross-play with bedrock clients
+      # - floodgate: authenticate players with bedrock accounts rather than requiring login with java accounts
+      TYPE: "FABRIC"
+      MODRINTH_PROJECTS: "lithium,sodium,fabric-api,geyser:beta,floodgate:beta"
