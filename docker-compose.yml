@@ -7,7 +7,7 @@ services:
     stdin_open: true
 
     volumes:
-      - ./data:/data # directory to persist your world state :)
+      - ~/data-minecraft-server/data-1.20.4-building-wands:/data # directory to persist your world state :)
 
     ports:
       # ports required for gameplay
