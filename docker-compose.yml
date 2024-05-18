@@ -7,7 +7,7 @@ services:
     stdin_open: true
 
     volumes:
-      - ~/data-minecraft-server/data-1.20.4-building-wands:/data # directory to persist your world state :)
+      - ~/data-minecraft-server/data-1.20.5:/data # directory to persist your world state :)
 
     ports:
       # ports required for gameplay
@@ -21,7 +21,7 @@ services:
     environment:
       # required setup
       EULA: "TRUE"
-      VERSION: "1.20.4" # server version supported by the bedrock bridge mod "geyser"
+      VERSION: "1.20.5" # server version supported by the bedrock bridge mod "geyser"
 
       # mods sourced from https://modrinth.com/mods with the mod loader fabric https://fabricmc.net/
       # - lithium,sodium: popular performance improvements recommended by the community
@@ -29,7 +29,9 @@ services:
       # - geyser: server bridge to handle cross-play with bedrock clients
       # - floodgate: authenticate players with bedrock accounts rather than requiring login with java accounts
       TYPE: "FABRIC"
-      MODRINTH_PROJECTS: "lithium,sodium,fabric-api,geyser:beta,floodgate:beta,architectury-api,cloth-config,building-wands"
+      # MODRINTH_PROJECTS: "lithium,sodium,fabric-api,geyser:beta,floodgate:beta,architectury-api,cloth-config,building-wands"
+      # building-wands is not yet compatible with 1.20.5
+      MODRINTH_PROJECTS: "lithium,sodium,fabric-api,geyser:beta,floodgate:beta"
 
     env_file:
       # set your optional settings in the env file if desired
