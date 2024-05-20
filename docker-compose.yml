@@ -18,6 +18,10 @@ services:
       EULA: "TRUE"
       VERSION: "1.20.4"
 
+      # system resources
+      INIT_MEMORY: "1G"
+      MAX_MEMORY: "4G"
+
       # mods sourced from https://modrinth.com/mods
       TYPE: "NEOFORGE"
       MODRINTH_PROJECTS: "builders-delight,structure-gel-api,terrablender,glitchcore,biomes-o-plenty,ct-overhaul-village,exlines-furniture,dungeons-plus,more-mob-variants,collective,double-doors,natures-compass"
