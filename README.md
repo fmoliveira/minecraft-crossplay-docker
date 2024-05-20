@@ -4,6 +4,29 @@ This project is a containerized Minecraft server that comes pre-configured for c
 
 It's worth noting that this repository contains merely a set of environment configurations that I put together after some trial and error, and this is what worked well for me. Please see the credits section at the bottom for the list of actual projects that I've used to configure this environment.
 
+## Client setup
+
+Client version:
+- Java 1.20.4
+
+Required mods:
+- builders-delight
+- structure-gel-api
+- terrablender
+- glitchcore
+- biomes-o-plenty
+- exlines-furniture
+- dungeons-plus
+- natures-compass
+- more-mob-variants
+
+Optional enhancement mods:
+- xaeros-world-map
+- xaeros-minimap
+- ambientsounds
+- cloth-config
+- betterf3
+
 ## Pre-requisites
 
 - [Docker](https://www.docker.com/) is required to execute the containerized setup.
