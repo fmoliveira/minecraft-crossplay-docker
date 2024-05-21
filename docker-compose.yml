@@ -7,7 +7,7 @@ services:
     stdin_open: true
 
     volumes:
-      - ~/data-minecraft-server/data-1.20.4-neoforge:/data # directory to persist your world state :)
+      - ~/data-minecraft-server/data-1.20.4-forge:/data # directory to persist your world state :)
 
     ports:
       # ports required for gameplay
@@ -24,7 +24,7 @@ services:
 
       # mods sourced from https://modrinth.com/mods
       TYPE: "NEOFORGE"
-      MODRINTH_PROJECTS: "builders-delight,structure-gel-api,terrablender,glitchcore,biomes-o-plenty,ct-overhaul-village,exlines-furniture,dungeons-plus,more-mob-variants,collective,double-doors,natures-compass"
+      MODRINTH_PROJECTS: "terralith,tectonic,towns-and-towers,architectury,building-wands,builders-delight,exlines-furniture,more-mob-variants,collective,double-doors,natures-compass,better-archeology"
       # unstable: balm,waystones
       # unsupported: mob-catalog,bens-sharks
 

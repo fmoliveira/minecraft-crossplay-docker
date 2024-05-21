@@ -11,21 +11,18 @@ Client version:
 
 Required mods:
 - builders-delight
-- structure-gel-api
-- terrablender
-- glitchcore
-- biomes-o-plenty
 - exlines-furniture
-- dungeons-plus
 - natures-compass
 - more-mob-variants
 
 Optional enhancement mods:
 - xaeros-world-map
 - xaeros-minimap
-- ambientsounds
 - cloth-config
 - betterf3
+- architectury
+- building-wands
+- better-archeology
 
 ## Pre-requisites
 
