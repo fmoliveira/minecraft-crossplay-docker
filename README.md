@@ -14,15 +14,16 @@ Required mods:
 - exlines-furniture
 - natures-compass
 - more-mob-variants
+- mob-catalog
+- better-archeology
 
 Optional enhancement mods:
 - xaeros-world-map
 - xaeros-minimap
 - cloth-config
 - betterf3
-- architectury
+- architectury-api
 - building-wands
-- better-archeology
 
 ## Pre-requisites
 
