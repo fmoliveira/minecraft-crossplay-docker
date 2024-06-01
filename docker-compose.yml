@@ -8,6 +8,7 @@ services:
 
     volumes:
       - ~/data-minecraft-server/data-1.20.5:/data # directory to persist your world state :)
+      - ~/my-data/minecraft-projects/java-datapacks/minecraft-functions:/data/world/datapacks/minecraft-functions # separate directory to version datapacks with direct deployment
 
     ports:
       # ports required for gameplay
@@ -31,7 +32,7 @@ services:
       TYPE: "FABRIC"
       # MODRINTH_PROJECTS: "lithium,sodium,fabric-api,geyser:beta,floodgate:beta,architectury-api,cloth-config,building-wands"
       # building-wands is not yet compatible with 1.20.5
-      MODRINTH_PROJECTS: "lithium,sodium,fabric-api,geyser:beta,floodgate:beta"
+      MODRINTH_PROJECTS: "lithium,sodium,fabric-api,geyser:beta,floodgate:beta,collective,double-doors,automatic-doors"
 
     env_file:
       # set your optional settings in the env file if desired
